@@ -1,4 +1,17 @@
+bump = require "bump"
+tween = require "tween"
+require "camera"
+require "editor"
+require "map"
+loadTextures()
+
+require "tile"
+
+gamestate = "Editor"
+
 function love.load()
+
+
 
 end
 
@@ -6,11 +19,17 @@ end
 
 function love.update( dt )
 
+	editor.update( dt )
+
 end
 
 
 
 function love.draw()
+
+	camera:set()
+	editor.draw()
+	camera:unset()
 
 end
 
